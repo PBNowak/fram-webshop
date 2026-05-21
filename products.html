@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>FRAM | Products</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <button class="menu-button" id="menuButton" aria-label="Open navigation menu">☰</button>
+    <a href="index.html" class="logo">FRAM</a>
+    <div class="basket-counter" aria-label="Basket items">0</div>
+  </header>
+
+  <nav class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <button class="close-menu" id="closeMenu" aria-label="Close navigation menu">✕</button>
+
+    <ul class="menu-links">
+      <li><a href="products.html">Products</a></li>
+      <li><a href="chat.html">Chat</a></li>
+    </ul>
+
+    <a href="#" class="checkout-link">Checkout</a>
+  </nav>
+
+  <main>
+    <section class="products-intro">
+      <h1>Produce</h1>
+      <p>
+        Explore our selection of seasonal produce, sourced directly from local farms to ensure peak freshness and quality.
+      </p>
+    </section>
+
+    <section class="products-section" aria-labelledby="products-heading">
+      <h2 id="products-heading">Available Produce</h2>
+
+      <ul class="product-grid">
+        <li>
+          <article class="product-card">
+            <img src="images/oats.jpg" alt="Oats">
+            <button type="button" class="add-button">Add to basket ↑</button>
+            <h3>Oats</h3>
+            <p>1 kg</p>
+            <strong>16 kr / kg</strong>
+          </article>
+        </li>
+
+        <li>
+          <article class="product-card">
+            <img src="images/red-onions.jpg" alt="Red onions">
+            <button type="button" class="add-button">Add to basket ↑</button>
+            <h3>Red Onions</h3>
+            <p>1 kg</p>
+            <strong>45 kr / kg</strong>
+          </article>
+        </li>
+
+        <li>
+          <article class="product-card">
+            <img src="images/garlic.jpg" alt="Garlic">
+            <button type="button" class="add-button">Add to basket ↑</button>
+            <h3>Garlic</h3>
+            <p>0.2 kg</p>
+            <strong>38 kr</strong>
+          </article>
+        </li>
+
+        <li>
+          <article class="product-card">
+            <img src="images/potatoes.jpg" alt="Potatoes">
+            <button type="button" class="add-button">Add to basket ↑</button>
+            <h3>Potato</h3>
+            <p>1 kg</p>
+            <strong>32 kr / kg</strong>
+          </article>
+        </li>
+
+        <li>
+          <article class="product-card">
+            <img src="images/carrots.jpg" alt="Carrots">
+            <button type="button" class="add-button">Add to basket ↑</button>
+            <h3>Carrots</h3>
+            <p>1 kg</p>
+            <strong>48 kr / kg</strong>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section class="farms-section">
+      <h2>See Our Partnering Farms</h2>
+
+      <figure class="map-placeholder">
+        <img src="images/map-placeholder.jpg" alt="Map showing partner farm locations">
+        <figcaption>Map integration will show local partner farms.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <h2>FRAM</h2>
+
+    <section class="newsletter-section">
+      <h3>Stay Updated</h3>
+      <p>Sign up for our newsletter to hear about seasonal produce and farm updates.</p>
+
+      <form id="newsletterForm">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit">Send</button>
+        <p id="newsletterMessage" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </footer>
+
+  <script src="menu.js"></script>
+  <script src="products.js"></script>
+</body>
+</html>
