@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>FRAM | Chat</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <button 
+      class="menu-button"
+      id="menuButton"
+      aria-label="Open navigation menu"
+    >
+      ☰
+    </button>
+
+    <h1 class="logo">
+      <a href="index.html">FRAM</a>
+    </h1>
+
+    <div class="basket-counter">
+      0
+    </div>
+
+  </header>
+
+  <!-- MENU -->
+  <nav 
+    class="menu-overlay"
+    id="menuOverlay"
+    aria-hidden="true"
+  >
+
+    <button 
+      class="close-menu"
+      id="closeMenu"
+      aria-label="Close navigation menu"
+    >
+      ✕
+    </button>
+
+    <ul class="menu-links">
+      <li><a href="products.html">Products</a></li>
+      <li><a href="chat.html">Chat</a></li>
+    </ul>
+
+    <a href="#" class="checkout-link">
+      Checkout
+    </a>
+
+  </nav>
+
+  <!-- MAIN -->
+  <main class="chat-page">
+
+    <!-- CHAT HEADER -->
+    <section class="chat-intro">
+
+      <h2>FRAM Assistant</h2>
+
+      <p>
+        Ask us anything about produce, deliveries, farms, or sustainability.
+      </p>
+
+    </section>
+
+    <!-- CHAT WINDOW -->
+    <section class="chat-window">
+
+      <div class="chat-messages" id="chatMessages">
+
+        <!-- BOT MESSAGE -->
+        <article class="message bot-message">
+          <p>
+            Hello! How can I help you today?
+          </p>
+        </article>
+
+      </div>
+
+      <!-- CHAT FORM -->
+      <form 
+        class="chat-form"
+        id="chatForm"
+      >
+
+        <label 
+          class="sr-only"
+          for="chatInput"
+        >
+          Ask a question
+        </label>
+
+        <input
+          type="text"
+          id="chatInput"
+          placeholder="Ask about produce or delivery..."
+          required
+        >
+
+        <button type="submit">
+          Send
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  
+
+  <script src="menu.js"></script>
+  <script src="chat.js"></script>
+
+</body>
+</html>
