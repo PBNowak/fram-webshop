@@ -818,7 +818,7 @@ input:focus {
   width: fit-content;
   max-width: 75%;
   padding: 0.7rem 1rem;
-  border-radius: 14px;
+  border-radius: 24px;
 }
 
 .bot-message {
@@ -827,4 +827,25 @@ input:focus {
 
 .user-message {
   background-color: var(--light-blue);
+}
+.typing-bubble {
+  min-width: 80px;
+  min-height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typing-bubble p {
+  display: flex;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.typing-dot {
+  width: 9px;
+  height: 9px;
+  background-color: var(--text);
+  border-radius: 50%;
+  display: inline-block;
 }

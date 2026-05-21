@@ -76,9 +76,13 @@ function showTypingMessage() {
   typingMessage.innerHTML = `
     <span class="message-name">FRAM</span>
 
-    <div class="message bot-message">
-      <p>...</p>
-    </div>
+    <div class="message bot-message typing-bubble">
+  <p>
+  <span class="typing-dot"></span>
+  <span class="typing-dot"></span>
+  <span class="typing-dot"></span>
+</p>
+</div>
   `;
 
   chatMessages.appendChild(typingMessage);
