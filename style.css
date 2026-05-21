@@ -725,3 +725,106 @@ input:focus {
     height: calc(100vh - 96px);
   }
 }
+/* =========================
+   CHAT MESSAGE POLISH
+========================= */
+
+.message {
+  width: fit-content;
+  max-width: 78%;
+}
+
+.bot-row {
+  display: grid;
+  grid-template-columns: 40px auto;
+  justify-content: start;
+}
+
+.user-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-row .message {
+  margin-left: auto;
+  background-color: var(--light-blue);
+}
+
+.bot-row .message {
+  background-color: var(--primary-bg);
+}
+/* =========================
+   FINAL CHAT ALIGNMENT FIX
+========================= */
+
+.bot-row {
+  display: grid;
+  grid-template-columns: 40px auto;
+  align-items: center;
+  justify-content: start;
+}
+
+.user-row {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.message {
+  width: fit-content;
+  max-width: 78%;
+}
+
+.user-row .message {
+  margin-left: auto;
+  background-color: var(--light-blue);
+}
+
+.bot-row .message {
+  background-color: var(--primary-bg);
+}
+/* =========================
+   FINAL CHAT MESSAGE LAYOUT
+========================= */
+
+.chat-messages {
+  width: 100%;
+}
+
+.message-row {
+  width: 100%;
+}
+
+.bot-row {
+  display: grid;
+  grid-template-columns: 40px auto;
+  align-items: center;
+  justify-content: start;
+  gap: 0.6rem;
+}
+
+.user-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.message-name {
+  text-align: center;
+  font-family: var(--font-logo);
+  font-size: 0.75rem;
+}
+
+.message {
+  width: fit-content;
+  max-width: 75%;
+  padding: 0.7rem 1rem;
+  border-radius: 14px;
+}
+
+.bot-message {
+  background-color: var(--primary-bg);
+}
+
+.user-message {
+  background-color: var(--light-blue);
+}

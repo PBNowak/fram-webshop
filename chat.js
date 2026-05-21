@@ -11,7 +11,6 @@ const botReplies = [
 ];
 
 chatForm.addEventListener("submit", (event) => {
-
   event.preventDefault();
 
   const userMessage = chatInput.value.trim();
@@ -20,39 +19,80 @@ chatForm.addEventListener("submit", (event) => {
     return;
   }
 
-  addMessage(userMessage, "user");
+  addUserMessage(userMessage);
 
   chatInput.value = "";
 
+  showTypingMessage();
+
   setTimeout(() => {
+    removeTypingMessage();
 
     const randomReply =
       botReplies[Math.floor(Math.random() * botReplies.length)];
 
-    addMessage(randomReply, "bot");
-
+    addBotMessage(randomReply);
   }, 900);
-
 });
 
-function addMessage(text, sender) {
+function addUserMessage(text) {
+  const messageRow = document.createElement("article");
 
-  const message = document.createElement("article");
+  messageRow.className = "message-row user-row";
 
-  message.classList.add("message");
-
-  if (sender === "user") {
-    message.classList.add("user-message");
-  } else {
-    message.classList.add("bot-message");
-  }
-
-  message.innerHTML = `
-    <p>${text}</p>
+  messageRow.innerHTML = `
+    <div class="message user-message">
+      <p>${text}</p>
+    </div>
   `;
 
-  chatMessages.appendChild(message);
+  chatMessages.appendChild(messageRow);
+  scrollToLatestMessage();
+}
 
+function addBotMessage(text) {
+  const messageRow = document.createElement("article");
+
+  messageRow.className = "message-row bot-row";
+
+  messageRow.innerHTML = `
+    <span class="message-name">FRAM</span>
+
+    <div class="message bot-message">
+      <p>${text}</p>
+    </div>
+  `;
+
+  chatMessages.appendChild(messageRow);
+  scrollToLatestMessage();
+}
+
+function showTypingMessage() {
+  const typingMessage = document.createElement("article");
+
+  typingMessage.className = "message-row bot-row";
+  typingMessage.id = "typingMessage";
+
+  typingMessage.innerHTML = `
+    <span class="message-name">FRAM</span>
+
+    <div class="message bot-message">
+      <p>...</p>
+    </div>
+  `;
+
+  chatMessages.appendChild(typingMessage);
+  scrollToLatestMessage();
+}
+
+function removeTypingMessage() {
+  const typingMessage = document.getElementById("typingMessage");
+
+  if (typingMessage) {
+    typingMessage.remove();
+  }
+}
+
+function scrollToLatestMessage() {
   chatMessages.scrollTop = chatMessages.scrollHeight;
-
 }
