@@ -72,7 +72,8 @@
     <!-- HERO SECTION -->
     <section class="hero">
 
-      <img src="images/hero-image.jpg"
+      <img 
+        src="images/hero-image.jpg"
         alt="Mountain landscape representing local Norwegian farms"
       >
 
@@ -103,7 +104,7 @@
         >
 
         <p>
-          New produce is added continuously as the seasons change.
+          New produce is added continuously as time goes by and the seasons change.
         </p>
 
         <a href="products.html" class="primary-button">
@@ -126,7 +127,7 @@
         >
 
         <p>
-          Learn more about our farms, produce, and sustainable delivery system.
+          New produce is added continuously as time goes by and the seasons change.
         </p>
 
         <a href="chat.html" class="primary-button">
@@ -134,6 +135,104 @@
         </a>
 
       </article>
+
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="how-it-works" aria-labelledby="how-it-works-heading">
+
+      <header class="section-heading">
+        <h2 id="how-it-works-heading">
+          This Is How It Works
+        </h2>
+      </header>
+
+      <article class="process-step">
+        <h3>Order Groceries</h3>
+        <p>
+          Fram is a circular service that ensures your kitchen is always stocked with the essentials you need. Browse our seasonal selection, choose your items, and place your order online.
+        </p>
+        <a href="products.html">See our stock here</a>
+      </article>
+
+      <article class="process-step">
+        <h3>Stock Up</h3>
+        <p>
+          Once your order arrives, unpack the produce and store it however it works best for you. Hold onto the containers — they are yours to keep until your next order.
+        </p>
+      </article>
+
+      <article class="process-step">
+        <h3>Scan & Reorder</h3>
+        <p>
+          Ready for a refill? Grab the containers from your last order and scan the QR code with our app or your phone’s camera. This instantly adds the items back to your cart, making reordering simple.
+        </p>
+      </article>
+
+      <article class="process-step">
+        <h3>Swap & Reuse</h3>
+        <p>
+          When we deliver your new order, simply leave your empty containers outside. We pick them up, clean them thoroughly, and reuse them for future deliveries.
+        </p>
+      </article>
+
+    </section>
+
+    <!-- POPULAR PRODUCE SECTION -->
+    <section class="popular-produce" aria-labelledby="popular-produce-heading">
+
+      <h2 id="popular-produce-heading">
+        Popular Produce
+      </h2>
+
+      <ul class="product-preview-grid">
+
+        <li>
+          <article class="product-preview-card">
+            <img src="images/oats.jpg" alt="Oats">
+            <button type="button" class="add-button">
+              Add to basket ↑
+            </button>
+
+            <div class="product-info">
+              <h3>Oats</h3>
+              <p>1 kg</p>
+              <strong>48 kr / kg</strong>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="product-preview-card">
+            <img src="images/red-onions.jpg" alt="Red onions">
+            <button type="button" class="add-button">
+              Add to basket ↑
+            </button>
+
+            <div class="product-info">
+              <h3>Red Onions</h3>
+              <p>0.5 kg</p>
+              <strong>48 kr / kg</strong>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="product-preview-card">
+            <img src="images/garlic.jpg" alt="Garlic">
+            <button type="button" class="add-button">
+              Add to basket ↑
+            </button>
+
+            <div class="product-info">
+              <h3>Garlic</h3>
+              <p>0.2 kg</p>
+              <strong>48 kr / kg</strong>
+            </div>
+          </article>
+        </li>
+
+      </ul>
 
     </section>
 
@@ -149,10 +248,10 @@
       <h3>Stay Updated</h3>
 
       <p>
-        Sign up for our newsletter to hear about seasonal produce and farm updates.
+        Sign up for our newsletter to be the first to know about new produce or other exciting news.
       </p>
 
-      <form id="newsletterForm">
+      <form id="newsletterForm" novalidate>
 
         <label for="firstName">
           First Name
@@ -179,7 +278,9 @@
         <button type="submit">
           Send
         </button>
-<p id="newsletterMessage" class="form-message" aria-live="polite"></p>
+
+        <p id="newsletterMessage" class="form-message" aria-live="polite"></p>
+
       </form>
 
     </section>
