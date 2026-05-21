@@ -600,3 +600,129 @@ input:focus {
     padding-left: 2rem;
   }
 }
+/* =========================
+   CHAT PAGE
+========================= */
+
+.chat-page {
+  min-height: calc(100vh - 64px);
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--primary-bg);
+}
+
+.chat-intro {
+  display: grid;
+  place-items: center;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--text);
+}
+
+.chat-intro h2 {
+  max-width: 18rem;
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.chat-intro p {
+  max-width: 24rem;
+  margin: 1rem auto 0;
+  font-family: var(--font-logo);
+}
+
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  min-height: 520px;
+  padding: 1.5rem;
+}
+
+.chat-messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+}
+
+.message {
+  max-width: 75%;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  font-size: 0.9rem;
+}
+
+.message p {
+  margin: 0;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background-color: var(--white);
+  border: 1px solid var(--text);
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: var(--green);
+  color: var(--text);
+}
+
+.chat-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--text);
+}
+
+.chat-form input {
+  min-height: 44px;
+  padding: 0.8rem;
+  border: 1px solid var(--text);
+  border-radius: 999px;
+  background-color: var(--white);
+}
+
+.chat-form button {
+  min-height: 44px;
+  padding: 0 1.2rem;
+  border-radius: 999px;
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.chat-form button:hover {
+  background-color: var(--red-hover);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Desktop chat layout */
+
+@media (min-width: 768px) {
+  .chat-page {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .chat-intro {
+    border-right: 1px solid var(--text);
+    border-bottom: none;
+  }
+
+  .chat-window {
+    min-height: calc(100vh - 64px);
+    padding: 2rem;
+  }
+}
