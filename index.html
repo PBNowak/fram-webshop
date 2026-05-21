@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>FRAM | Sustainable Food Delivery</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <button 
+      class="menu-button"
+      id="menuButton"
+      aria-label="Open navigation menu"
+    >
+      ☰
+    </button>
+
+    <h1 class="logo">FRAM</h1>
+
+    <div 
+      class="basket-counter"
+      aria-label="Basket items"
+    >
+      0
+    </div>
+
+  </header>
+
+  <!-- MENU OVERLAY -->
+  <nav 
+    class="menu-overlay"
+    id="menuOverlay"
+    aria-hidden="true"
+  >
+
+    <button 
+      class="close-menu"
+      id="closeMenu"
+      aria-label="Close navigation menu"
+    >
+      ✕
+    </button>
+
+    <ul class="menu-links">
+      <li><a href="products.html">Products</a></li>
+      <li><a href="chat.html">Chat</a></li>
+    </ul>
+
+    <a href="#" class="checkout-link">
+      Checkout
+    </a>
+
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+      <img 
+        src="assets/images/hero-image.jpg"
+        alt="Mountain landscape representing local Norwegian farms"
+      >
+
+      <div class="hero-content">
+        <h2>FRAM</h2>
+
+        <p>
+          Home delivery from your local farms
+        </p>
+      </div>
+
+    </section>
+
+    <!-- INFO SECTION -->
+    <section class="info-section">
+
+      <article class="info-card">
+
+        <h3>Shop Our Seasonal Selection</h3>
+
+        <p class="accent-text">
+          Updated every week
+        </p>
+
+        <img 
+          src="assets/images/shop-selection.jpg"
+          alt="Fresh vegetables in a basket"
+        >
+
+        <p>
+          New produce is added continuously as the seasons change.
+        </p>
+
+        <a href="products.html" class="primary-button">
+          Browse Products
+        </a>
+
+      </article>
+
+      <article class="info-card">
+
+        <h3>Ask Us About Anything</h3>
+
+        <p class="accent-text">
+          All your questions answered
+        </p>
+
+        <img 
+          src="assets/images/chat-image.jpg"
+          alt="Local farmer standing in a field"
+        >
+
+        <p>
+          Learn more about our farms, produce, and sustainable delivery system.
+        </p>
+
+        <a href="chat.html" class="primary-button">
+          Go to Chat
+        </a>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <h2>FRAM</h2>
+
+    <section class="newsletter-section">
+
+      <h3>Stay Updated</h3>
+
+      <p>
+        Sign up for our newsletter to hear about seasonal produce and farm updates.
+      </p>
+
+      <form id="newsletterForm">
+
+        <label for="firstName">
+          First Name
+        </label>
+
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          required
+        >
+
+        <label for="email">
+          Email Address
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+        >
+
+        <button type="submit">
+          Send
+        </button>
+
+      </form>
+
+    </section>
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/menu.js"></script>
+
+</body>
+</html>
