@@ -21,3 +21,38 @@ document.addEventListener("keydown", (event) => {
     closeMenu();
   }
 });
+const newsletterForm = document.getElementById("newsletterForm");
+const newsletterMessage = document.getElementById("newsletterMessage");
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+if (newsletterForm) {
+  newsletterForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const firstName = document.getElementById("firstName").value.trim();
+    const email = document.getElementById("email").value.trim();
+
+    if (!firstName || !email) {
+      newsletterMessage.textContent = "Please fill in all fields.";
+      newsletterMessage.className = "form-message error-message";
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      newsletterMessage.textContent = "Please enter a valid email address.";
+      newsletterMessage.className = "form-message error-message";
+      return;
+    }
+
+    newsletterMessage.textContent =
+      `Thank you, ${firstName}! You are now signed up.`;
+
+    newsletterMessage.className =
+      "form-message success-message";
+
+    newsletterForm.reset();
+  });
+}

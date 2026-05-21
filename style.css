@@ -343,3 +343,16 @@ input:focus {
   outline: 3px solid var(--green);
   outline-offset: 3px;
 }
+.form-message {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.success-message {
+  color: white;
+}
+
+.error-message {
+  color: #e1eaf0;
+  font-weight: bold;
+}
