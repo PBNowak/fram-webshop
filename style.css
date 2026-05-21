@@ -308,3 +308,38 @@ button {
     padding-left: 2rem;
   }
 }
+/* =========================
+   HERO IMAGE PLACEHOLDER
+========================= */
+
+.hero {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.25)
+  );
+}
+
+/* =========================
+   HOVER EFFECTS
+========================= */
+
+.primary-button,
+.newsletter-section button {
+  transition: background-color 0.2s ease;
+}
+
+.primary-button:hover,
+.newsletter-section button:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+a:focus,
+button:focus,
+input:focus {
+  outline: 3px solid var(--green);
+  outline-offset: 3px;
+}
