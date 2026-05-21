@@ -63,63 +63,59 @@
 
   </nav>
 
-  <!-- MAIN -->
-  <main class="chat-page">
+ <main class="chat-page">
 
-    <!-- CHAT HEADER -->
-    <section class="chat-intro">
+  <!-- CHAT WINDOW -->
+  <section class="chat-card" aria-labelledby="chat-heading">
 
-      <h2>FRAM Assistant</h2>
+    <h2 id="chat-heading" class="sr-only">
+      FRAM Assistant Chat
+    </h2>
 
-      <p>
-        Ask us anything about produce, deliveries, farms, or sustainability.
-      </p>
+    <div class="chat-messages" id="chatMessages">
 
-    </section>
+      <!-- BOT MESSAGE -->
+      <article class="message-row bot-row">
+        <span class="message-name">FRAM</span>
 
-    <!-- CHAT WINDOW -->
-    <section class="chat-window">
-
-      <div class="chat-messages" id="chatMessages">
-
-        <!-- BOT MESSAGE -->
-        <article class="message bot-message">
+        <div class="message bot-message">
           <p>
-            Hello! How can I help you today?
+            What can I help you with today?
           </p>
-        </article>
+        </div>
+      </article>
 
-      </div>
+    </div>
 
-      <!-- CHAT FORM -->
-      <form 
-        class="chat-form"
-        id="chatForm"
+    <!-- CHAT FORM -->
+    <form 
+      class="chat-form"
+      id="chatForm"
+    >
+
+      <label 
+        class="sr-only"
+        for="chatInput"
+      >
+        Ask a question
+      </label>
+
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="Ask about produce, farms, or delivery..."
+        required
       >
 
-        <label 
-          class="sr-only"
-          for="chatInput"
-        >
-          Ask a question
-        </label>
+      <button type="submit" aria-label="Send message">
+        ↑
+      </button>
 
-        <input
-          type="text"
-          id="chatInput"
-          placeholder="Ask about produce or delivery..."
-          required
-        >
+    </form>
 
-        <button type="submit">
-          Send
-        </button>
+  </section>
 
-      </form>
-
-    </section>
-
-  </main>
+</main>
 
   
 
