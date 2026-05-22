@@ -10,7 +10,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400&display=swap" rel="stylesheet">
-
+<!-- Leaflet Map CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -240,14 +244,17 @@
         </h2>
       </div>
 
-      <div class="map-container">
+     <div class="map-container">
 
-        <img 
-          src="images/map-placeholder.jpg"
-          alt="Map showing partner farm locations"
-        >
+  <div 
+    id="farmMap" 
+    class="farm-map"
+    aria-label="Interactive map showing partner farm locations"
+  ></div>
 
-      </div>
+  <p id="mapMessage" class="map-message" aria-live="polite"></p>
+
+</div>
 
     </section>
 
@@ -298,8 +305,11 @@
 
   </footer>
 
-  <script src="menu.js"></script>
-  <script src="products.js"></script>
+  <!-- Leaflet Map JavaScript -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="menu.js"></script>
+<script src="products.js"></script>
 
 </body>
 </html>
