@@ -1,13 +1,29 @@
 const addButtons = document.querySelectorAll(".add-to-basket");
 const basketCounter = document.getElementById("basketCounter");
+const mapMessage = document.getElementById("mapMessage");
+const weatherMessage = document.getElementById("weatherMessage");
 
-let basketAmount = 0;
+class Basket {
+  constructor(counterElement) {
+    this.counterElement = counterElement;
+    this.amount = 0;
+  }
+
+  addItem() {
+    this.amount++;
+    this.updateCounter();
+  }
+
+  updateCounter() {
+    this.counterElement.textContent = this.amount;
+  }
+}
+
+const basket = new Basket(basketCounter);
 
 addButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    basketAmount++;
-
-    basketCounter.textContent = basketAmount;
+    basket.addItem();
 
     button.textContent = "Added ✓";
 
@@ -16,8 +32,6 @@ addButtons.forEach((button) => {
     }, 1000);
   });
 });
-
-const mapMessage = document.getElementById("mapMessage");
 
 function loadFarmMap() {
   try {
@@ -46,6 +60,44 @@ function loadFarmMap() {
   }
 }
 
+async function loadFarmWeather() {
+  if (!weatherMessage) {
+    return;
+  }
+
+  try {
+    weatherMessage.textContent = "Loading farm weather...";
+
+    const latitude = 60.144;
+    const longitude = 11.174;
+
+    const weatherUrl =
+      `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,wind_speed_10m`;
+
+    const response = await fetch(weatherUrl);
+
+    if (!response.ok) {
+      throw new Error("Weather data could not be loaded.");
+    }
+
+    const data = await response.json();
+
+    const temperature = data.current.temperature_2m;
+    const windSpeed = data.current.wind_speed_10m;
+
+    weatherMessage.textContent =
+      `Current farm weather: ${temperature}°C with wind speed ${windSpeed} km/h.`;
+  } catch (error) {
+    console.error("Weather API error:", error);
+
+    weatherMessage.textContent =
+      "Farm weather could not be loaded right now. Please try again later.";
+
+    weatherMessage.classList.add("map-error");
+  }
+}
+
 if (document.getElementById("farmMap")) {
   loadFarmMap();
+  loadFarmWeather();
 }
