@@ -44,10 +44,10 @@ function loadFarmMap() {
       attribution: "&copy; OpenStreetMap contributors"
     }).addTo(map);
 
-    L.marker(farmLocation)
-      .addTo(map)
-      .bindPopup("<strong>FRAM Partner Farm</strong><br>Local seasonal produce")
-      .openPopup();
+   L.marker(farmLocation)
+  .addTo(map)
+  .bindPopup("<strong>Braastad Gaard</strong><br>Oppdalslinna 242, 2740 Roa")
+  .openPopup();
 
     mapMessage.textContent = "Interactive map loaded successfully.";
   } catch (error) {

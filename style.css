@@ -875,6 +875,27 @@ input:focus {
   color: var(--red);
   font-weight: 700;
 }
+
+.map-message {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.map-message.map-error {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip-path: none;
+  white-space: normal;
+  margin-top: 0.75rem;
+  color: var(--red);
+  font-weight: 700;
+}
 /* =========================
    FARM WEATHER API
 ========================= */
