@@ -696,10 +696,15 @@ input:focus {
 .chat-form button {
   width: 48px;
   height: 48px;
+  border: none;
+  outline: none;
   border-radius: 12px;
   background-color: var(--red);
   color: var(--white);
   font-size: 1.4rem;
+}
+.chat-form button:focus {
+  outline: none;
 }
 
 .chat-form button:hover {
