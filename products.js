@@ -72,7 +72,7 @@ async function loadFarmWeather() {
     const longitude = 11.174;
 
     const weatherUrl =
-      `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,wind_speed_10m`;
+  `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
 
     const response = await fetch(weatherUrl);
 
@@ -82,8 +82,8 @@ async function loadFarmWeather() {
 
     const data = await response.json();
 
-    const temperature = data.current.temperature_2m;
-    const windSpeed = data.current.wind_speed_10m;
+    const temperature = data.current_weather.temperature;
+const windSpeed = data.current_weather.windspeed;
 
     weatherMessage.textContent =
       `Current farm weather: ${temperature}°C with wind speed ${windSpeed} km/h.`;
